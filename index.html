@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Newsletter</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <header>
+            <div class="logo">
+                <img src="logo.jpg" alt="logo" width="100%">
+            </div>
+            <div class="text">
+                <p>ZA BOLJŠE ŽIVLJENJE OBČUTLJIVE KOŽE</p>
+            </div>
+        </header>
+        <main class="image">
+           <img src="layer9.png" alt="img">
+           <div class="btns">
+               <button onclick="changeImage1()"></button>
+               <button onclick="changeImage2()"></button>
+               <button onclick="changeImage3()"></button>
+           </div>
+        </main>
+       
+        <section class="products-wrap">
+            <div class="product" onclick="addValue(10)">
+                <img src="1.png" alt="product1">
+                <div class="price">
+                    Cena: 10din
+                </div>
+            </div>
+            <div class="product" onclick="addValue(20)">
+                <img src="2.png" alt="product2">
+                <div class="price">
+                    Cena: 20din
+                </div>
+            </div>
+            <div class="product" onclick="addValue(15)">
+                <img src="3.png" alt="product3">
+                <div class="price">
+                    Cena: 15din
+                </div>
+            </div>  
+        </section>
+        
+        <div class="box">
+            Korpa: 
+            <div id="korpa">0</div>
+            <button style="width: 60px;">Naruci</button>
+        </div>
+         <footer>
+           <div class="center">
+               <a href="#">www.laroche-posay.com.si</a>
+               <span> | </span>
+                <a href="#">La Roche-Posao izdelki</a>
+            </div>
+            
+            <div class="icons">
+                <i class="fab fa-facebook"></i>
+                <img src="youtube.png" alt="youtube" width="80">
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        
+       function changeImage1() {
+           document.getElementsByTagName("img")[1].setAttribute("src", "layer2.jpg");
+       } 
+        function changeImage2() {
+           document.getElementsByTagName("img")[1].setAttribute("src", "layer3.jpg");
+       } 
+        function changeImage3() {
+           document.getElementsByTagName("img")[1].setAttribute("src", "layer9.png");
+       } 
+        
+        let korpa = document.getElementById("korpa");
+        let count = 0;
+        function addValue(broj){
+            count = count + broj;
+            korpa.innerHTML = count;
+        }
+    
+    </script>
+</body>
+</html>
